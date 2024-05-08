@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="../../assets/img/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Cliente | Medical Services</title>
+  <meta name="author" content="Gerónimo Mercante" />
+  <meta name="description" content="Primer parcial para Producción Web" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/bf83cc6de9.js" crossorigin="anonymous"></script>
+  <style>
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+</head>
+<body>
+  <main class="flex w-full flex-col">
+    <nav class="w-full flex items-center justify-between p-5 shadow">
+      <span title="Menú" tabindex="1" class="cursor-pointer text-3xl" id="sidebarBtn">
+        <i class="fa-solid fa-bars"></i>
+      </span>
+      <div>
+        <a class="custom_btn-accent" href="../login.html">Cerrar sesión</a>
+      </div>
+    </nav>
+
+    <section class="flex min-h-[90vh]">
+      <aside id="sidebar" class="flex w-[275px] bg-red-500 min-h-full px-2 py-2">
+        <ul class="w-full flex flex-col gap-3 mt-4">
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="#calendar" class="flex items-center gap-2">
+              <i class="fa-regular fa-calendar"></i>
+              Calendario
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="#history_clinic" class="flex items-center gap-2">
+              <i class="fa-solid fa-book-medical"></i>
+              Historial clínico
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="content w-full min-h-full p-4" id="calendar">
+        <!-- Turnos Confirmados-->
+        <div class="w-full flex items-start justify-between">
+          <h3 class="text-xl font-bold text-red-500 uppercase">Calendario médico <br> <span class="text-green-500 text-sm">Turnos confirmados</span></h3>
+          <button class="custom_btn-accent" id="turnBtn">Solicitar turno</button>
+        </div>
+        <div class="card_container w-full flex items-start justify-start flex-wrap my-5" style="gap: 20px 80px;">
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4">
+            <span class="icon bg-red-500 text-white flex items-center justify-center py-5 px-[30px] min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-spa"></i>
+            </span>
+            <div class="flex flex-col gap-2">
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-red-500 uppercase">Fecha - Hora</h3>
+                <p class="text-1xl font-bold">10/05/2024 - 15:00</p>
+              </div>
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-red-500 uppercase">Especialidad</h3>
+                <p class="text-1xl font-bold">Cardiología</p>
+              </div>
+            </div>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-red-500 uppercase">Doctor asignado</h3>
+              <p class="text-1xl font-bold">Yayo Guridi</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4 mt-2">
+            <span class="icon bg-green-500 text-white flex items-center justify-center py-5 px-[30px] min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-spa"></i>
+            </span>
+            <div class="flex flex-col gap-2">
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-green-500 uppercase">Fecha - Hora</h3>
+                <p class="text-1xl font-bold">10/05/2024 - 15:00</p>
+              </div>
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-green-500 uppercase">Especialidad</h3>
+                <p class="text-1xl font-bold">Traumatología</p>
+              </div>
+            </div>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-green-500 uppercase">Doctor asignado</h3>
+              <p class="text-1xl font-bold">José María Listorti</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4 mt-2">
+            <span class="icon bg-yellow-500 text-white flex items-center justify-center py-5 px-[30px] min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-spa"></i>
+            </span>
+            <div class="flex flex-col gap-2">
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-yellow-500 uppercase">Fecha - Hora</h3>
+                <p class="text-1xl font-bold">20/05/2024 - 09:15</p>
+              </div>
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-yellow-500 uppercase">Especialidad</h3>
+                <p class="text-1xl font-bold">Cirugía</p>
+              </div>
+            </div>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-yellow-500 uppercase">Doctor asignado</h3>
+              <p class="text-1xl font-bold">Mariano Iudica</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Turnos pendientes -->
+        <div class="w-full flex items-center justify-start">
+          <h3 class="text-sm font-bold text-gray-700 uppercase">Turnos pendientes de confirmación</h3>
+        </div>
+        <div class="card_container w-full flex items-start justify-start flex-wrap my-5" style="gap: 20px 80px;">
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4">
+            <span class="icon bg-gray-500 text-white flex items-center justify-center py-5 px-[30px] min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-spa"></i>
+            </span>
+            <div class="flex flex-col gap-2">
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-gray-500 uppercase">Fecha - Hora</h3>
+                <p class="text-1xl font-bold">23/11/2024 - 18:30</p>
+              </div>
+              <div class="px-2 py-2">
+                <h3 class="text-1xl font-bold text-gray-500 uppercase">Especialidad</h3>
+                <p class="text-1xl font-bold">Oncologiá</p>
+              </div>
+            </div>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-gray-500 uppercase">Doctor asignado</h3>
+              <p class="text-1xl font-bold">Susuana Gimenez</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-fullp-4">
+          <h4 class="text-xl font-bold text-red-500 uppercase">Historial de turnos</h4>
+          <!-- Table -->
+          <div class="relative overflow-x-auto py-5">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                      Doctor
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Email
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Especialidad
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Fecha
+                    </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      Yayo Guridi
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      geronimo.mercante@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Cardiología
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      10/5/2024
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      José María Listorti
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      john.doe@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Traumatología
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      7/5/2024
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      Mariano Iudica
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      jane.doe@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Cirugía
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      5/5/2024
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="custom_btn-primary w-fit mt-4 float-right mr-2">Ver historial completo</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content w-full min-h-full p-4 hidden" id="history_clinic">
+        <h3 class="text-xl font-bold text-red-500 uppercase">Historial Clinico</h3>
+        <div class="w-full flex flex-col items-start justify-start mt-4 gap-[10px]" id="details_client">
+          <div class="w-full flex items-start justify-start gap-[80px]">
+            <div class="w-[70%] flex flex-col">
+              <label for="name" class="w-full text-gray-500 text-lg">Nombre del paciente</label>
+              <input type="text" class="w-full px-2 py-1 rounded border border-gray-300" name="name" id="name" readonly value="Gerónimo Mercante">
+            </div>
+            <div class="w-[30%] flex flex-col">
+              <label for="name" class="w-full text-gray-500 text-lg">Sexo</label>
+              <input type="text" class="w-full px-2 py-1 rounded border border-gray-300" name="sex" id="sex" readonly value="Masculino">
+            </div>
+          </div>
+          <div class="w-full flex items-start justify-start gap-[80px]">
+            <div class="w-[70%] flex flex-col">
+              <label for="age" class="w-full text-gray-500 text-lg">Edad</label>
+              <input type="text" class="w-full px-2 py-1 rounded border border-gray-300" name="age" id="age" readonly value="24 años">
+            </div>
+            <div class="w-[30%] flex flex-col">
+              <label for="name" class="w-full text-gray-500 text-lg">Fecha de ingreso</label>
+              <input type="date" class="w-full px-2 py-1 rounded border border-gray-300" name="name" id="name" readonly value="2024-05-10">
+            </div>
+          </div>
+          <div class="w-full flex flex-col items-start justify-start">
+            <div class="w-full text-center text-lg flex items-center justify-center mt-5">
+              <span class="line h-[1px] w-full bg-gray-500"></span>
+              <h3 class="text-lg font-bold text-red-500 uppercase mx-2 text-nowrap whitespace-nowrap">Información</h3>
+              <span class="line h-[1px] w-full bg-gray-500"></span>
+            </div>
+            <div class="w-full flex flex-col" id="body_information">
+              <div id="header_information" class="w-full mt-5">
+                <div class="filters w-full flex items-center justify-around">
+                  <button id="all_information" class="btn active">Mostrar todos</button>
+                  <button id="enfermedades" class="btn">Enfermedades crónicas</button>
+                  <button id="diagnosticos" class="btn">Últimos diagnosticos</button>
+                  <button id="historial" class="btn">Historial de enfermedades</button>
+                </div>
+              </div>
+              <div id="body_information" class="w-full mt-[35px]">
+                <!-- Enfermedades -->
+                <div id="enfermedades_body" class="w-full">
+                  <h4 class="text-lg font-bold uppercase flex items-start justify-start gap-[20px]"><span class="text-3xl text-red-500"><i class="fa-solid fa-user-injured"></i></span>Enfermedades crónicas</h4>
+                  <div class="w-full flex items-center justify-start gap-[20px]">
+                    <div class="relative overflow-x-auto py-5 w-full">
+                      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                          <tr>
+                              <th scope="col" class="px-6 py-3">
+                                Enfermedad
+                              </th>
+                              <th scope="col" class="px-6 py-3">
+                                Tratamiento
+                              </th>
+                              <th scope="col" class="px-6 py-3">
+                                Fecha diagnostico
+                              </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                  Asma
+                                </th>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  Seretide 500mg
+                                </td>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  10/5/2024
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                  Diabetes
+                                </th>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  Metformina
+                                </td>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  7/5/2024
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                  Hipertensión
+                                </th>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  Metformina
+                                </td>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  5/5/2024
+                                </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Diagnosticos -->
+                <div id="diagnosticos_body" class="w-full">
+                  <h4 class="text-lg font-bold uppercase flex items-start justify-start gap-[20px]"><span class="text-3xl text-red-500"><i class="fa-solid fa-receipt"></i></span>Últimos diagnosticos</h4>
+                  <div class="w-full flex items-center justify-start gap-[20px]">
+                    <div class="relative overflow-x-auto py-5 w-full">
+                      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3">
+                              Diagnostico
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                              Tratamiento
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                              Fecha diagnostico
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                Gripe
+                              </th>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                Next - Ibuprofeno 600mg
+                              </td>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                10/5/2024
+                              </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                Sinusitis
+                              </th>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                Reposo - Ibuprofeno 600mg
+                              </td>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                7/5/2024
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Historial -->
+                <div id="historial_body" class="w-full">
+                  <h4 class="text-lg font-bold uppercase flex items-start justify-start gap-[20px]"><span class="text-3xl text-red-500"><i class="fa-solid fa-clock-rotate-left"></i></span>Historial de enfermedades</h4>
+                  <div class="w-full flex items-center justify-start gap-[20px]">
+                    <div class="relative overflow-x-auto py-5 w-full">
+                      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3">
+                              Enfermedad
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                              Fecha
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                              Bronquitis
+                            </th>
+                            <td class="px-6 py-4 text-gray-900 ">
+                              10/5/2017
+                            </td>
+                          </tr>
+                          <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                              Neumonía
+                            </th>
+                            <td class="px-6 py-4 text-gray-900 ">
+                              7/5/2019
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <footer>
+      <div class="w-full bg-red-400 h-1/5">
+        <p class="w-full text-center text-white p-3" id="copyright"></p>
+      </div>
+    </footer>
+  </main>
+
+  <div id="turnModal" class="fixed z-10 inset-0 overflow-y-auto hidden overlay">
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="bg-white rounded-lg max-w-[750px] w-[70%]">
+        <h2 class="text-xl font-bold mb-2 w-full text-left bg-red-500 pl-5 py-2 text-white">Reservar turno</h2>
+        <div class="w-full flex flex-col items-center p-6">
+          <form class="form w-full flex flex-col gap-5">
+            <div class="w-full">
+              <label for="name" class="w-full flex">Nombre completo<span class="text-red-500">*</span></label>
+              <input type="text" name="name" id="name" class="w-full rounded p-2 border border-red-600" readonly value="Gerónimo Mercante" required/>
+            </div>
+            <div class="w-full">
+              <label for="specialt" class="w-full flex">Especialidad<span class="text-red-500">*</span></label>
+              <select name="specialt" id="specialt" class="w-full rounded p-2 border border-red-600" required>
+                <option value="null">Seleccione una opción</option>
+                <option value="cardiologia">Cardiología</option>
+                <option value="cirugia">Cirugía</option>
+                <option value="dermatologia">Dermatología</option>
+                <option value="endocrinologia">Endocrinología</option>
+                <option value="gastroenterologia">Gastroenterología</option>
+                <option value="ginecologia">Ginecología</option>
+                <option value="neonatologia">Neonatología</option>
+                <option value="neumologia">Neumología</option>
+                <option value="neurologia">Neurología</option>
+                <option value="oftalmologica">Oftalmológica</option>
+                <option value="oncologia">Oncología</option>
+                <option value="otorrinolaringologia">Otorrinolaringología</option>
+                <option value="pediatria">Pediatría</option>
+                <option value="psiquiatria">Psiquiatría</option>
+                <option value="radiologia">Radiología</option>
+                <option value="reumatologia">Reumatología</option>
+                <option value="traumatologia">Traumatología</option>
+                <option value="urologia">Urología</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <label for="modalidad" class="w-full flex">Tipo de consulta<span class="text-red-500">*</span></label>
+              <select name="modalidad" id="modalidad" class="w-full rounded p-2 border border-red-600" required>
+                <option value="null">Seleccione una modalidad</option>
+                <option value="presencial">Consulta Presencial</option>
+                <option value="virtual">Consulta Virtual</option>
+              </select>
+            </div>
+            <div class="w-full">
+              <label for="time" class="w-full">Fecha y hora<span class="text-red-500">*</span></label>
+              <input type="datetime-local" name="time" id="time" class="w-full rounded p-2 border border-red-600" required/>
+            </div>
+            <div class="w-full">
+              <!-- notes -->
+              <label for="notes" class="w-full">Notas</label>
+              <textarea name="notes" id="notes" class="w-full rounded p-2 border border-red-600 resize-none"></textarea>
+            </div>
+          </form>
+          <div class="button-container w-full flex items-center justify-end gap-5 mt-4">
+            <button id="closeModal" class="custom_btn-primary">Cerrar</button>
+            <button id="confirmTurn" class="custom_btn-accent">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/sidebar-module.js"></script>
+  <script src="../../js/manipule-dom-client.js" type="text/javascript"></script>
+  <script src="../../js/filter-client-module.js"></script>
+</body>
+</html>

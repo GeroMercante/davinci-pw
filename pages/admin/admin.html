@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="../../assets/img/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Admin | Medical Services</title>
+  <meta name="author" content="Gerónimo Mercante" />
+  <meta name="description" content="Primer parcial para Producción Web" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/bf83cc6de9.js" crossorigin="anonymous"></script>
+  <style>
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+</head>
+<body>
+  <main class="flex w-full flex-col">
+    <nav class="w-full flex items-center justify-between p-5 shadow">
+      <span title="Menú" tabindex="1" class="cursor-pointer text-3xl" id="sidebarBtn">
+        <i class="fa-solid fa-bars"></i>
+      </span>
+      <div>
+        <a class="custom_btn-accent" href="../login.html">Cerrar sesión</a>
+      </div>
+    </nav>
+
+    <section class="flex min-h-[90vh]">
+      <aside id="sidebar" class="flex w-[275px] bg-red-500 min-h-full px-2 py-2">
+        <ul class="w-full flex flex-col gap-3 mt-4">
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="../medical/medical.html" class="flex items-center gap-2">
+              <i class="fa-solid fa-people-roof"></i>
+              Dashboard Médico
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="../client/client.html" class="flex items-center gap-2">
+              <i class="fa-solid fa-people-roof"></i>
+              Dashboard Paciente
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-300 text-red-500 shadow rounded">
+            <a href="#" class="flex items-center gap-2">
+              <i class="fa-solid fa-user"></i>
+              Usuarios
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-300 text-red-500 shadow rounded">
+            <a href="#" class="flex items-center gap-2">
+              <i class="fa-solid fa-tag"></i>
+              Precios
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-300 text-red-500 shadow rounded">
+            <a href="#" class="flex items-center gap-2">
+              <i class="fa-solid fa-cloud"></i>
+              Servicios
+            </a>
+          </li>
+        </li>
+        <li class="w-full p-5 bg-red-300 text-red-500 shadow rounded">
+          <a href="#" class="flex items-center gap-2">
+            <i class="fa-regular fa-calendar"></i>
+            Calendario
+          </a>
+        </li>
+      </li>
+      <li class="w-full p-5 bg-red-300 text-red-500 shadow rounded">
+        <a href="#" class="flex items-center gap-2">
+          <i class="fa-solid fa-kit-medical"></i>
+          Portal médico
+        </a>
+      </li>
+      <li class="w-full p-5 bg-red-300 text-red-500 shadow rounded">
+        <a href="#" class="flex items-center gap-2">
+          <i class="fa-solid fa-info"></i>
+          Soporte / Ayuda
+        </a>
+      </li>
+        </ul>
+      </aside>
+      <div class="content w-full min-h-full p-4">
+        <h3 class="text-3xl font-bold text-red-500">Administración</h3>
+
+        <!-- Cards -->
+        <div class="card_container w-full flex items-start justify-start flex-wrap my-5" style="gap: 20px 80px;">
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-red-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-hand-holding-medical"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-red-500 uppercase">Médicos</h3>
+              <p class="text-1xl font-bold">35</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-green-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-green-500 uppercase">Usuarios</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-yellow-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-yellow-500 uppercase">Áreas</h3>
+              <p class="text-1xl font-bold">17</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-red-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-tag"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-red-500 uppercase">Servicios</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-green-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-calendar"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-green-500 uppercase">Calendario</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-yellow-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-file-invoice"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-yellow-500 uppercase">Facturas</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-red-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-file-invoice"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-red-500 uppercase">Reportes</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-green-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-file-invoice"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-green-500 uppercase">Reportes</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-yellow-500 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-file-invoice"></i>
+            </span>
+            <div class="px-2 py-2">
+              <h3 class="text-1xl font-bold text-yellow-500 uppercase">Reportes</h3>
+              <p class="text-1xl font-bold">20</p>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] pr-4">
+            <span class="icon bg-blue-300 text-white flex items-center justify-center p-5 min-w-[88px]" style="font-size: var(--fs-header-h1);">
+              <i class="fa-solid fa-gear"></i>
+            </span>
+            <div class="px-2 py-2 flex items-center">
+              <h3 class="text-1xl font-bold text-blue-300 uppercase">Configuración</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="relative overflow-x-auto py-5">
+          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr>
+                  <th scope="col" class="px-6 py-3">
+                    Nombre del usuario
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Email
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Rol
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                    Última actividad
+                  </th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      Gerónimo Mercante
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      geronimo.mercante@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      ADMIN
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      10/5/2024
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      John Doe
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      john.doe@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Médico, Clínico
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      7/5/2024
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      Jane Doe
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      jane.doe@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Médico
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      5/5/2024
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+          <button class="custom_btn-primary w-fit mt-4 float-right mr-2">Ver todos los usuarios</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="w-full bg-red-400 h-1/5">
+        <p class="w-full text-center text-white p-3" id="copyright"></p>
+      </div>
+    </footer>
+  </main>
+
+  <div id="welcomeModal" class="fixed z-10 inset-0 overflow-y-auto hidden overlay">
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="bg-white p-6 rounded-lg">
+        <div class="text-center">
+          <h2 class="text-lg font-bold mb-2">¡Bienvenido, gracias por usar nuestro sistema!</h2>
+          <p>Este es nuestro panel de administrador.</p>
+          <p>
+            Aquí podrás gestionar la base de datos, como visualizacion <br>
+            de los datos, manipular ciertas funcionalidades, etc.
+          </p>
+          <button id="closeModal" class="mt-4 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="../../js/sidebar-module.js"></script>
+<script>
+  const footerText = document.getElementById("copyright");
+  const year = new Date().getFullYear();
+
+  footerText.innerHTML = `&copy; ${year} Gerónimo Mercante. Todos los derechos reservados.`
+
+  if (document.referrer.includes("register.html")) console.log("El usuario vino de la página de registro.");
+  else if (document.referrer.includes("login.html")) console.log("El usuario vino de la página de inicio de sesión.");
+  else console.log("El usuario vino de una página desconocida.");
+
+  if ((document.referrer.includes("register.html") || document.referrer.includes("login.html")) && document.referrer !== "") {
+    const welcomeModal = document.getElementById('welcomeModal');
+    welcomeModal.classList.remove('hidden');
+  }
+
+  const closeModalButton = document.getElementById('closeModal');
+  closeModalButton.addEventListener('click', function() {
+      const welcomeModal = document.getElementById('welcomeModal');
+      welcomeModal.classList.add('hidden');
+  });
+
+</script>
+</html>

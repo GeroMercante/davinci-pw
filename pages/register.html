@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico" href="./assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <title>Register | Medical Services</title>
+    <meta name="author" content="Gerónimo Mercante" />
+    <meta name="description" content="Primer parcial para Producción Web" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bf83cc6de9.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <aside id="sidebar" class="w-full left-0 right-0 top-0 flex pt-4 pb-4 sticky z-10 bg-white shadow" aria-label="Sidebar" tabindex="0">
+    <nav class="w-[100%] flex items-center gap-5 justify-around">
+      <div class="flex w-[20%]">
+        <h1 class="font-bold flex items-center gap-2" style="font-size: var(--fs-header-h3);">
+          <span class="text-white bg-red-500 p-2 rounded text-xl"><i class="fa-solid fa-bolt"></i></span>
+          Medio
+        </h1>
+      </div>
+      <ul class="flex gap-12 opacity-0 pointer-events-none">
+        <li>
+          <a href="../index.html" class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in">Inicio</a>
+        </li>
+        <li>
+          <a href="../index.html#about" class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in">Sobre nosotros</a>
+        </li>
+        <li>
+          <a href="../index.html#services" class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in">Servicios</a>
+        </li>
+        <li>
+          <a href="../index.html#contact" class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in">Contacto</a>
+        </li>
+      </ul>
+      <div class="flex items-center justify-center gap-5 w-[20%]">
+        <a class="custom_btn-accent" href="../index.html">Volver a la home</a>
+      </div>
+    </nav>
+  </aside>
+
+  <div class="w-full px-[%4] min-h-[70vh] flex items-start justify-center py-5 mt-5">
+    <div class="card shadow w-[455px] rounded">
+      <h1 class="bg-red-500 text-white px-2 py-2" style="font-size: var(--fs-header-h4);">Registrarse en Medio</h1>
+      <div class="px-2 py-5 flex flex-col gap-5 items-center">
+        <div class="input_box w-full">
+          <input type="first_name" autocomplete="name" name="first_name" id="first_name" class="w-full rounded p-2 border border-gray-300" required />
+          <span for="first_name">Nombre</span>
+        </div>
+        <div class="input_box w-full">
+          <input type="last_name" name="last_name" id="last_name" class="w-full rounded p-2 border border-gray-300" required/>
+          <span for="last_name">Apellido</span>
+        </div>
+        <div class="input_box w-full">
+          <input type="email" name="email" autocomplete="email" id="email" class="w-full rounded p-2 border border-gray-300" required/>
+          <span for="email">Email</span>
+        </div>
+        <div class="input_box w-full">
+          <input type="password" name="password" id="password" class="w-full rounded p-2 border border-gray-300" required/>
+          <span for="password">Contraseña</span>
+        </div>
+        <div class="input_box w-full">
+          <input type="number" name="number_socio" id="number_socio" class="w-full rounded p-2 border border-gray-300" required/>
+          <span for="number_socio" role="label">N° de Socio</span>
+        </div>
+        <div class="w-full flex justify-between">
+          <span class="text-gray-500">¿Ya tienes una cuenta? <a href="./login.html" class="text-red-500">Inicia sesión aquí</a></span>
+          <a class="custom_btn-accent w-fit" href="./admin/admin.html">Registrarse</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w-full bg-red-500 flex flex-col items-center justify-around gap-5">
+    <div class="w-full bg-red-500 p-5 flex items-start justify-around gap-5 my-4 relative" >
+      <div class="flex items-center justify-center">
+        <h1 class="font-bold flex items-center p-2 gap-2 text-white shadow" style="font-size: var(--fs-header-h3)">
+          <span class="text-white bg-red-500 rounded text-xl"><i class="fa-solid fa-bolt"></i></span>
+          Medio
+        </h1>
+      </div>
+      <div class="flex flex-col items-center text-white">
+        <h4 class="text-2xl mb-2">Crea una cuenta gratuita</h4>
+        <ul class="w-full flex flex-col gap-2 text-left">
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-center text-white">
+        <h4 class="text-2xl mb-2">Crea una cuenta gratuita</h4>
+        <ul class="w-full flex flex-col gap-2 text-left">
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-center text-white">
+        <h4 class="text-2xl mb-2">Crea una cuenta gratuita</h4>
+        <ul class="w-full flex flex-col gap-2 text-left">
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+          <li>Registrarse en Medio</li>
+        </ul>
+      </div>
+      <span class="absolute top-[-80px] h-[200px] w-full z-1 shadow rounded-t-full bg-red-200" style="z-index: -1;"></span>
+    </div>
+    <div class="w-full p-2 bg-white">
+      <p class="text-right text-gray-500" id="copyright"></p>
+    </div>
+  </footer>
+  <script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById('copyright').innerHTML = `&copy; ${currentYear} Gerónimo Mercante. Todos los derechos reservados.` 
+  </script>
+</body>
+</html>

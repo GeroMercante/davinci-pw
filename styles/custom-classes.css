@@ -1,0 +1,58 @@
+/* Use prefix custom */
+.custom_btn-primary {
+  color: var(--color-primary);
+  background: var(--color-white);
+  font-size: 17px;
+  font-weight: 300;
+  border: 2px solid var(--color-primary);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 18px;
+  transition: 0.3s;
+}
+
+.custom_btn-accent {
+  color: var(--color-white);
+  background: var(--color-primary);
+  font-size: 17px;
+  font-weight: 300;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px var(--color-primary);
+  transition: 0.3s;
+}
+
+.btn {
+  color: var(--color-primary);
+  background: var(--color-white);
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 4px 12px;
+  border: 2px solid var(--color-primary);
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+  color: var(--color-white);
+  background: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.custom_btn-accent:hover, .custom_btn-primary:hover {
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+/* Titles */
+.title-font {
+  font-family: "Cabin Condensed", sans-serif;
+  letter-spacing: 2px;
+}

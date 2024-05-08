@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&family=Cabin+Sketch:wght@400;700&display=swap');
+
+:root {
+  --color-white:                                             #fff;
+  --color-black:                                          #000000;
+  --color-dark:                                           #3a4151;
+  --color-biscuit:                                        #fdd29b;
+  --color-primary:                                        #f43c34;
+  --color-secondary:                                      #fedddc;
+  --color-accent-primary:                                 #ffffff;
+  /* --------------------- DIMENSION SECTION -------------------- */
+  --navbar-height:                                          129.5px;
+  /* ----------------------- FONTS SECTION ---------------------- */
+  --font-main:                                  'Cabin', sans-serif;
+  --fs-header-h1:                                              42px;
+  --fs-header-h2:                                              40px;
+  --fs-header-h3:                                              30px;
+  --fs-header-h4:                                              24px;
+  --fw-header-h1:                                               700;
+  --fw-header-h2:                                               700;
+  --fw-header-h3:                                               700;
+  --fw-header-h4:                                               500;
+}
+
+/* Global Settings CSS */
+*, *::before, *::after {
+  scroll-behavior:       smooth;
+  box-sizing:        border-box;
+}
+body {
+  margin:                     0;
+  font-family: var(--font-main);
+  padding:                    0;
+  box-sizing:        border-box;
+}
+
+h1 {
+  font-size:    var(--fs-header-h1);
+  font-weight:  var(--fw-header-h1);
+}
+
+h2 {
+  font-size:    var(--fs-header-h2);
+  font-weight:  var(--fw-header-h2);
+}
+
+h3 {
+  font-size:    var(--fs-header-h3);
+  font-weight:  var(--fw-header-h3);
+}
+
+h4 {
+  font-size:    var(--fs-header-h4);
+  font-weight:  var(--fw-header-h4);
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p, a, span, button {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color:        inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  cursor:   pointer;
+  outline:     none;
+  border:      none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0;
+}
+
+img, video { 
+  width: 100%;
+}

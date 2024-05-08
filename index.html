@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/ico" href="./assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <title>Medio | Medical Services</title>
+    <meta name="author" content="Gerónimo Mercante" />
+    <meta name="description" content="Primer parcial para Producción Web" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bf83cc6de9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Layout -->
+    <aside
+      id="sidebar"
+      class="w-full left-0 right-0 top-0 flex pt-4 pb-4 sticky z-10 bg-white shadow"
+      aria-label="Sidebar"
+      tabindex="0"
+    >
+      <nav class="w-[100%] flex items-center gap-5 justify-around">
+        <div class="flex w-[20%]">
+          <h1
+            class="font-bold flex items-center gap-2"
+            style="font-size: var(--fs-header-h3)"
+          >
+            <span class="text-white bg-red-500 p-2 rounded text-xl"
+              ><i class="fa-solid fa-bolt"></i
+            ></span>
+            Medio
+          </h1>
+        </div>
+        <ul class="flex gap-12">
+          <li>
+            <a
+              href="#"
+              class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in"
+              >Sobre nosotros</a
+            >
+          </li>
+          <li>
+            <a
+              href="#service"
+              class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-500 text-xl hover:text-red-500 transition duration-200 ease-in"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+        <div class="flex items-center justify-center gap-5 w-[20%]">
+          <a class="custom_btn-primary" href="./pages/login.html"
+            >Iniciar sesión</a
+          >
+          <a class="custom_btn-accent" href="./pages/register.html"
+            >Registrarse</a
+          >
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Home Section -->
+    <section id="home" class="w-full grid grid-cols-2 gap-10 pt-5 pb-5 px-[4%] mt-5">
+      <div class="flex flex-col gap-5 mt-[4em]">
+        <span class="w-fit bg-red-100 text-red-500 p-2 rounded uppercase text-sm tracking-[3px]">Servicios médicos 24/7</span>
+        <h3 class="font-bold title-font" style="font-size: var(--fs-header-h1)">
+          Explore el Camino <br> 
+          del Bienestar: Nuestro Equipo <br> 
+          Médico, tu Guía Confiable
+        </h3>
+        <p class="text-gray-500">
+          Entendemos la importancia de su salud. Nuestro dedicado <br />
+          equipo de profesionales de la salud están para vos.
+        </p>
+      </div>
+      <div class="flex flex-col relative">
+        <img src="./assets/img/banner-1.jpg" alt="" style="height: 684px; width: 100%; pointer-events: none" class="object-contain" />
+        <div class="w-fit flex absolute bottom-[50%] left-0 right-0 bg-white p-2 rounded shadow gap-2 items-center">
+          <span class="w-fit bg-red-100 text-red-500 p-2 rounded-full text-xl flex items-center">
+            <i class="fa-solid fa-gift"></i>
+          </span>
+          <div class="text">
+            <p>Voucher</p>
+            <p class="text-gray-500">+ $20.000</p>
+          </div>
+        </div>
+
+        <div class="w-fit flex absolute top-0 left-20 translate-x-[-50%] right-0 rounded-full bg-white rounded shadow items-center">
+          <span class="w-fit bg-red-100 text-red-500 py-2 px-2 rounded-full w-full h-full text-[40px] flex items-center">
+            <i class="fa-solid fa-chart-pie"></i>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <div class="partners w-full flex bg-red-200 p-5 gap-5 justify-center" style="border-radius: 40px 0 0 0">
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-primary)">
+          <i class="fa-regular fa-heart"></i>
+        </span>
+        <p class="text-center">
+          Priorizamos <br />
+          tu salud
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-dark)">
+          <i class="fa-solid fa-code"></i>
+        </span>
+        <p class="text-center">
+          Software <br />
+          dedicado
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-biscuit)">
+          <i class="fa-regular fa-folder-closed"></i>
+        </span>
+        <p class="text-center">
+          Historial <br />
+          médico
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-primary)">
+          <i class="fa-solid fa-gift"></i>
+        </span>
+        <p class="text-center">
+          Premios <br />
+          mensuales
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-dark)">
+          <i class="fa-solid fa-truck-medical"></i>
+        </span>
+        <p class="text-center">
+          Médicamentos <br />
+          a domicilio
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-biscuit)">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </span>
+        <p class="text-center">
+          Atención <br />
+          24/7
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-primary)">
+          <i class="fa-solid fa-hands-holding-child"></i>
+        </span>
+        <p class="text-center">
+          Guardería <br />
+          para socios
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-dark)">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <p class="text-center">
+          Seguimiento <br />
+          personalizado
+        </p>
+      </div>
+      <div class="card_part flex flex-col gap-2 items-center bg-white shadow p-2 rounded">
+        <span class="icon" style="font-size: 40px; color: var(--color-biscuit)">
+          <i class="fa-regular fa-hospital"></i>
+        </span>
+        <p class="text-center">
+          Habitaciones<br />
+          premium
+        </p>
+      </div>
+    </div>
+    <!-- End Home Section -->
+
+    <!-- About section -->
+    <section id="about" class="w-full flex flex-col relative gap-10 pb-5 px-[4%] overflow-hidden">
+      <h2 class="font-bold text-left text-red-500 mt-[100px]" style="font-size: var(--fs-header-h1)">Sobre <span class="underline">Nosotros</span> .</h2>
+      <p class="text-gray-700" style="font-size: var(--fs-header-h3);">
+        Descubre nuestra amplia variedad de servicios médicos <span class="text-red-400">diseñados para <br>  
+        satisfacer tus  necesidades. Ya sea que busques</span> mejorar tu bienestar.
+      </p>
+
+      <div class="card_about w-fit py-5 px-7 flex items-center gap-5 shadow rounded">
+        <span class="text-red-500 text-5xl">
+          <i class="fa-solid fa-heart"></i>
+        </span>
+        <p class="text-gray-500 text-lg">Atención primaria: Revisiones regulares, vacunaciones y cuidados preventivos para mantenerte en óptima salud.</p>
+      </div>
+
+      <div class="card_about w-fit py-5 px-7 flex items-center gap-5 shadow rounded">
+        <span class="text-red-500 text-5xl">
+          <i class="fa-solid fa-kit-medical"></i>
+        </span>
+        <p class="text-gray-500 text-lg">Atención primaria: Revisiones regulares, vacunaciones y cuidados preventivos para mantenerte en óptima salud.</p>
+      </div>
+
+      <div class="card_about w-fit py-5 px-7 flex items-center gap-5 shadow rounded">
+        <span class="text-red-500 text-5xl">
+          <i class="fa-solid fa-microscope"></i>
+        </span>
+        <p class="text-gray-500 text-lg">Atención primaria: Revisiones regulares, vacunaciones y cuidados preventivos para mantenerte en óptima salud.</p>
+      </div>
+
+      <div class="card_about w-full flex items-center gap-5">
+        <img src="./assets/img/stethoscope.jpg" alt="Estetoscopio" style="max-width: 965px;" class="rounded object-contain">
+      </div>
+
+      <span class="absolute top-[15%] right-[15%] h-[100px] w-[100px] shadow rounded transform rotate-45"></span>
+      <span class="absolute top-[-80px] right-[-70px] h-[200px] w-[200px] shadow rounded-full border-[60px] border-red-200"></span>
+    </section>
+    <!-- End About section -->
+
+    <!-- Partners -->
+    <div class="partners w-full flex flex-col items-center justify-center p-5 gap-2 justify-center mt-[8em]">
+      <h2 class="font-bold" style="font-size: var(--fs-header-h3);">Nuestros socios Promocionales</h2>
+      <p class="text-gray-500 mb-5">Medio es una plataforma inspiradoras para empresas</p>
+      <div class="w-full px-[4%] flex items-center justify-center flex-wrap gap-[30px] mb-5">
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-1.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-2.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-3.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-4.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-5.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-6.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-3.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-1.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-3.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-6.png" alt="Amazon" class="object-contain w-full">
+        </div>
+        <div class="card-content bg-white p-5 w-[250px] h-[100px] rounded shadow">
+          <img src="./assets/img/partners/partner-2.png" alt="Amazon" class="object-contain w-full">
+        </div>
+      </div>
+    </div>
+    <!-- End Partners -->
+
+    <!-- Services -->
+    <section id="service" class="w-full flex flex-col items-center justify-center bg-gray-100 my-[4em] px-[4%]">
+      <div class="grid grid-cols-2 gap-10 w-full">
+        <div class="flex flex-col gap-5 my-[4em] text-left w-full">
+          <span class="w-fit bg-red-100 text-red-500 p-2 rounded uppercase text-sm tracking-[3px]">Comunicate con nuestros profesionales 24/7</span>
+          <h3 class="font-bold title-font" style="font-size: var(--fs-header-h1)">Liderando el camino en servicios de <br>Cardiología Avanzada</h3>
+          <p class="text-gray-500 mb-5 text-lg">Explore nuestros servicios integrales diseñados para mantenerlo a usted y a sus seres queridos <br>sanos e informados.</p>
+          <div class="card-consultadion flex items-start gap-5">
+            <span class="icon rounded-full bg-white text-red-600 p-4 flex items-center text-2xl shadow">
+              <i class="fa-solid fa-house-signal"></i>
+            </span>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-bold text-xl">Consultas virtuales</h3>
+              <p class="text-gray-500">
+                Con la actualización automática de precios, siempre estarás actualizado.
+              </p>
+            </div>
+          </div>
+          <div class="card-consultadion flex items-start gap-5 mt-3">
+            <span class="icon rounded-full bg-white text-red-600 p-4 flex items-center text-2xl shadow">
+              <i class="fa-solid fa-book"></i>
+            </span>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-bold text-xl">Exámenes de salud</h3>
+              <p class="text-gray-500">
+                Explora nuevos proyectos y tokens de tendencia.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-5 my-[4em] text-left w-full">
+          <img src="./assets/img/virtual-consultation.png" alt="Consulta virtual" class="rounded-full">
+        </div>
+      </div>
+    </section>
+    <!-- End services -->
+
+    <section id="question" class="w-full flex flex-col items-center justify-center my-[4em] px-[4%]">
+      <h2 class="font-bold text-center text-black" style="font-size: var(--fs-header-h3)">Preguntas Frecuentes sobre <br> nuestros servicios médicos</h2>
+      
+      <div class="box-questions w-full flex flex-col items-center justify-center shadow border border-gray-200 my-[2em]">
+        <div id="question_show-more" class="w-full flex flex-col items-center justify-start text-left gap-3 border-b-2 py-5 px-5">
+          <div class="title w-full flex items-center justify-between">
+            <h3 class="font-bold text-xl">P1: ¿Como programo una cita para servicios médicos?</h3>
+            <span class="icon_showmore cursor-pointer bg-red-500 text-white p-2 rounded-full flex items-center w-[30px] h-[30px] justify-center">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </div>
+          <div id="response_q" class="text-left w-full text-gray-500 hidden">
+            R1: Programar una cita es fácil. Puede llamar a nuestra recepción, utilizar nuestro sistema de reservas en línea en el sitio web o visitar las instalaciones en persona. <br> Nos esforzamos por adaptarnos a su horario y prioridades.
+          </div>
+        </div>
+
+        <div id="question_show-more" class="w-full flex flex-col items-center justify-start text-left gap-3 border-b-2 py-5 px-5">
+          <div class="title w-full flex items-center justify-between">
+            <h3 class="font-bold text-xl">P2: ¿Como programo una cita para consulta médica?</h3>
+            <span class="icon_showmore cursor-pointer bg-red-500 text-white p-2 rounded-full flex items-center w-[30px] h-[30px] justify-center">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </div>
+          <div id="response_q" class="text-left w-full text-gray-500 hidden">
+            R2: Programar una cita es fácil. Puede llamar a nuestra recepción, utilizar nuestro sistema de reservas en línea en el sitio web o visitar las instalaciones en persona. <br> Nos esforzamos por adaptarnos a su horario y prioridades.
+          </div>
+        </div> 
+
+        <div id="question_show-more" class="w-full flex flex-col items-center justify-start text-left gap-3 border-b-2 py-5 px-5">
+          <div class="title w-full flex items-center justify-between">
+            <h3 class="font-bold text-xl">P3: Área de cobertura y sucursales</h3>
+            <span class="icon_showmore cursor-pointer bg-red-500 text-white p-2 rounded-full flex items-center w-[30px] h-[30px] justify-center">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </div>
+          <div id="response_q" class="text-left w-full text-gray-500 hidden">
+            R3: Programar una cita es fácil. Puede llamar a nuestra recepción, utilizar nuestro sistema de reservas en línea en el sitio web o visitar las instalaciones en persona. <br> Nos esforzamos por adaptarnos a su horario y prioridades.
+          </div>
+        </div> 
+
+        <div id="question_show-more" class="w-full flex flex-col items-center justify-start text-left gap-3 border-b-2 py-5 px-5">
+          <div class="title w-full flex items-center justify-between">
+            <h3 class="font-bold text-xl">P4: ¿Como programar en Pascal?</h3>
+            <span class="icon_showmore cursor-pointer bg-red-500 text-white p-2 rounded-full flex items-center w-[30px] h-[30px] justify-center">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </div>
+          <div id="response_q" class="text-left w-full text-gray-500 hidden">
+            R4: Programar una cita es fácil. Puede llamar a nuestra recepción, utilizar nuestro sistema de reservas en línea en el sitio web o visitar las instalaciones en persona. <br> Nos esforzamos por adaptarnos a su horario y prioridades.
+          </div>
+        </div> 
+
+        <div id="question_show-more" class="w-full flex flex-col items-center justify-start text-left gap-3 border-b-2 py-5 px-5">
+          <div class="title w-full flex items-center justify-between">
+            <h3 class="font-bold text-xl">P5: ¿Como funcionan los puntos Medio?</h3>
+            <span class="icon_showmore cursor-pointer bg-red-500 text-white p-2 rounded-full flex items-center w-[30px] h-[30px] justify-center">
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </div>
+          <div id="response_q" class="text-left w-full text-gray-500 hidden">
+            R5: Programar una cita es fácil. Puede llamar a nuestra recepción, utilizar nuestro sistema de reservas en línea en el sitio web o visitar las instalaciones en persona. <br> Nos esforzamos por adaptarnos a su horario y prioridades.
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-red-500 flex flex-col items-center justify-around gap-5 mt-[120px]">
+      <div class="w-full bg-red-500 p-5 flex items-start justify-around gap-5 my-4 relative" >
+        <div class="flex items-center justify-center">
+          <h1 class="font-bold flex items-center p-2 gap-2 text-white shadow" style="font-size: var(--fs-header-h3)">
+            <span class="text-white bg-red-500 rounded text-xl"><i class="fa-solid fa-bolt"></i></span>
+            Medio
+          </h1>
+        </div>
+        <div class="flex flex-col items-center text-white">
+          <h4 class="text-2xl mb-2">Crea una cuenta gratuita</h4>
+          <ul class="w-full flex flex-col gap-2 text-left">
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center text-white">
+          <h4 class="text-2xl mb-2">Crea una cuenta gratuita</h4>
+          <ul class="w-full flex flex-col gap-2 text-left">
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center text-white">
+          <h4 class="text-2xl mb-2">Crea una cuenta gratuita</h4>
+          <ul class="w-full flex flex-col gap-2 text-left">
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+            <li>Registrarse en Medio</li>
+          </ul>
+        </div>
+        <span class="absolute top-[-80px] h-[200px] w-full z-1 shadow rounded-t-full bg-red-200" style="z-index: -1;"></span>
+      </div>
+      <div class="w-full p-2 bg-white">
+        <p class="text-right text-gray-500" id="copyright"></p>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="./js/app.js"></script>
+    <script src="./js/dropdown.js"></script>
+    <script>
+      const currentYear = new Date().getFullYear();
+      document.getElementById("copyright").innerHTML = `&copy; ${currentYear} Gerónimo Mercante. Todos los derechos reservados.`;
+    </script>
+  </body>
+</html>

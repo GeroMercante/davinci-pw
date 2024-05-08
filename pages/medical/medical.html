@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="../../assets/img/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Portal Médico | Medical Services</title>
+  <meta name="author" content="Gerónimo Mercante" />
+  <meta name="description" content="Primer parcial para Producción Web" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/bf83cc6de9.js" crossorigin="anonymous"></script>
+</head>
+</head>
+<body>
+  <main class="flex w-full flex-col">
+    <nav class="w-full flex items-center justify-between p-5 shadow">
+      <span title="Menú" tabindex="1" class="cursor-pointer text-3xl" id="sidebarBtn">
+        <i class="fa-solid fa-bars"></i>
+      </span>
+      <div>
+        <a class="custom_btn-accent" href="../login.html">Cerrar sesión</a>
+      </div>
+    </nav>
+
+    <section class="flex min-h-[90vh]">
+      <aside id="sidebar" class="flex w-[275px] bg-red-500 min-h-full px-2 py-2">
+        <ul class="w-full flex flex-col gap-3 mt-4">
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="#dashboar" class="flex items-center gap-2">
+              <i class="fa-solid fa-table-columns"></i>
+              Dashboard
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="#calendar" class="flex items-center gap-2">
+              <i class="fa-regular fa-calendar"></i>
+              Calendario
+            </a>
+          </li>
+          <li class="w-full p-5 bg-red-100 text-red-500 shadow rounded hover:bg-red-200 transition duration-300">
+            <a href="#history_clinic" class="flex items-center gap-2">
+              <i class="fa-solid fa-book-medical"></i>
+              Historial clínico
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="content w-full min-h-full p-4" id="turns">
+        <!-- Turnos Confirmados-->
+        <div class="w-full flex items-start justify-between">
+          <h3 class="text-xl font-bold text-red-500 uppercase">Próximos turnos <br><span class="text-gray-500 text-sm">Se mostraran los próximos 6 turnos</span></h3>
+          <button class="custom_btn-accent" id="add_turn">Ver agenda completa</button>
+        </div>
+        <!-- Card turns -->
+        <div class="card_container w-full flex items-start justify-start flex-wrap my-5" style="gap: 20px 40px;">
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4 gap-2">
+            <div class="w-[88px] bg-red-400 text-white flex items-center justify-center text-3xl"><i class="fa-regular fa-calendar"></i></div>
+            <div class="w-full flex flex-col items-start justify-start gap-2 py-2">
+              <h3 class="text-1xl font-bold text-red-400 uppercase">Fecha - Hora</h3>
+              <input type="datetime-local" class="w-full px-2 py-1 rounded border border-gray-300" name="date" id="date" value="2024-11-23T18:30" readonly>
+              <div class="flex gap-3">
+                <div>
+                  <p class="text-red-400">Estado</p>
+                  <p class="text-gray-500">Sin observaciones</p>
+                </div>
+                <div>
+                  <p class="text-red-400">Nombre paciente</p>
+                  <p class="text-gray-500">Gerónimo Mercante</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4 gap-2">
+            <div class="w-[88px] bg-red-400 text-white flex items-center justify-center text-3xl"><i class="fa-regular fa-calendar"></i></div>
+            <div class="w-full flex flex-col items-start justify-start gap-2 py-2">
+              <h3 class="text-1xl font-bold text-red-400 uppercase">Fecha - Hora</h3>
+              <input type="datetime-local" class="w-full px-2 py-1 rounded border border-gray-300" name="date" id="date" value="2024-11-23T19:30" readonly>
+              <div class="flex gap-3">
+                <div>
+                  <p class="text-red-400">Estado</p>
+                  <p class="text-gray-500">Sin observaciones</p>
+                </div>
+                <div>
+                  <p class="text-red-400">Nombre paciente</p>
+                  <p class="text-gray-500">Gerónimo Mercante</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4 gap-2">
+            <div class="w-[88px] bg-red-400 text-white flex items-center justify-center text-3xl"><i class="fa-regular fa-calendar"></i></div>
+            <div class="w-full flex flex-col items-start justify-start gap-2 py-2">
+              <h3 class="text-1xl font-bold text-red-400 uppercase">Fecha - Hora</h3>
+              <input type="datetime-local" class="w-full px-2 py-1 rounded border border-gray-300" name="date" id="date" value="2024-11-23T20:30" readonly>
+              <div class="flex gap-3">
+                <div>
+                  <p class="text-red-400">Estado</p>
+                  <p class="text-gray-500">Sin observaciones</p>
+                </div>
+                <div>
+                  <p class="text-red-400">Nombre paciente</p>
+                  <p class="text-gray-500">Gerónimo Mercante</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow flex cursor-pointer min-w-[230px] w-fit pr-4 gap-2">
+            <div class="w-[88px] bg-red-400 text-white flex items-center justify-center text-3xl"><i class="fa-regular fa-calendar"></i></div>
+            <div class="w-full flex flex-col items-start justify-start gap-2 py-2">
+              <h3 class="text-1xl font-bold text-red-400 uppercase">Fecha - Hora</h3>
+              <input type="datetime-local" class="w-full px-2 py-1 rounded border border-gray-300" name="date" id="date" value="2024-11-24T09:30" readonly>
+              <div class="flex gap-3">
+                <div>
+                  <p class="text-red-400">Estado</p>
+                  <p class="text-gray-500">Sin observaciones</p>
+                </div>
+                <div>
+                  <p class="text-red-400">Nombre paciente</p>
+                  <p class="text-gray-500">Gerónimo Mercante</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <div class="w-full flex items-start justify-between">
+            <h4 class="text-xl font-bold text-red-500 uppercase">Historial de turnos</h4>
+            <button class="custom_btn-accent" id="add_turn">Ver historial completo</button>
+          </div>
+          <!-- Table -->
+          <div class="relative overflow-x-auto py-5">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                      Paciente
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Email
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Observaciones
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                      Fecha
+                    </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      Yayo Guridi
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      geronimo.mercante@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Cuadro gripal - Tomar Ibuprofeno c/ 6hs.
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      10/5/2024
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      José María Listorti
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      john.doe@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Hipertensión - Tomar Ibuprofeno c/ 6hs.
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      7/5/2024
+                    </td>
+                </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                      Mariano Iudica
+                    </th>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      jane.doe@davinci.edu.ar
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      Sinusitis - Tomar Ibuprofeno c/ 6hs.
+                    </td>
+                    <td class="px-6 py-4 text-gray-900 ">
+                      5/5/2024
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="custom_btn-primary w-fit mt-4 float-right mr-2">Ver historial completo</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="content w-full min-h-full p-4 hidden" id="history_clinic">
+        <h3 class="text-xl font-bold text-red-500 uppercase">Historial Clinico</h3>
+        <div class="w-full flex flex-col items-start justify-start mt-4 gap-[10px]" id="details_client">
+          <div class="w-full flex items-start justify-start gap-[80px]">
+            <div class="w-[70%] flex flex-col">
+              <label for="name" class="w-full text-gray-500 text-lg">Nombre del paciente</label>
+              <input type="text" class="w-full px-2 py-1 rounded border border-gray-300" name="name" id="name" readonly value="Gerónimo Mercante">
+            </div>
+            <div class="w-[30%] flex flex-col">
+              <label for="name" class="w-full text-gray-500 text-lg">Sexo</label>
+              <input type="text" class="w-full px-2 py-1 rounded border border-gray-300" name="sex" id="sex" readonly value="Masculino">
+            </div>
+          </div>
+          <div class="w-full flex items-start justify-start gap-[80px]">
+            <div class="w-[70%] flex flex-col">
+              <label for="age" class="w-full text-gray-500 text-lg">Edad</label>
+              <input type="text" class="w-full px-2 py-1 rounded border border-gray-300" name="age" id="age" readonly value="24 años">
+            </div>
+            <div class="w-[30%] flex flex-col">
+              <label for="name" class="w-full text-gray-500 text-lg">Fecha de ingreso</label>
+              <input type="date" class="w-full px-2 py-1 rounded border border-gray-300" name="name" id="name" readonly value="2024-05-10">
+            </div>
+          </div>
+          <div class="w-full flex flex-col items-start justify-start">
+            <div class="w-full text-center text-lg flex items-center justify-center mt-5">
+              <span class="line h-[1px] w-full bg-gray-500"></span>
+              <h3 class="text-lg font-bold text-red-500 uppercase mx-2 text-nowrap whitespace-nowrap">Información</h3>
+              <span class="line h-[1px] w-full bg-gray-500"></span>
+            </div>
+            <div class="w-full flex flex-col" id="body_information">
+              <div id="header_information" class="w-full mt-5">
+                <div class="filters w-full flex items-center justify-around">
+                  <button id="all_information" class="btn active">Mostrar todos</button>
+                  <button id="enfermedades" class="btn">Enfermedades crónicas</button>
+                  <button id="diagnosticos" class="btn">Últimos diagnosticos</button>
+                  <button id="historial" class="btn">Historial de enfermedades</button>
+                </div>
+              </div>
+              <div id="body_information" class="w-full mt-[35px]">
+                <!-- Enfermedades -->
+                <div id="enfermedades_body" class="w-full">
+                  <h4 class="text-lg font-bold uppercase flex items-start justify-start gap-[20px]"><span class="text-3xl text-red-500"><i class="fa-solid fa-user-injured"></i></span>Enfermedades crónicas</h4>
+                  <div class="w-full flex items-center justify-start gap-[20px]">
+                    <div class="relative overflow-x-auto py-5 w-full">
+                      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                          <tr>
+                              <th scope="col" class="px-6 py-3">
+                                Enfermedad
+                              </th>
+                              <th scope="col" class="px-6 py-3">
+                                Tratamiento
+                              </th>
+                              <th scope="col" class="px-6 py-3">
+                                Fecha diagnostico
+                              </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                  Asma
+                                </th>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  Seretide 500mg
+                                </td>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  10/5/2024
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                  Diabetes
+                                </th>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  Metformina
+                                </td>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  7/5/2024
+                                </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                  Hipertensión
+                                </th>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  Metformina
+                                </td>
+                                <td class="px-6 py-4 text-gray-900 ">
+                                  5/5/2024
+                                </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Diagnosticos -->
+                <div id="diagnosticos_body" class="w-full">
+                  <h4 class="text-lg font-bold uppercase flex items-start justify-start gap-[20px]"><span class="text-3xl text-red-500"><i class="fa-solid fa-receipt"></i></span>Últimos diagnosticos</h4>
+                  <div class="w-full flex items-center justify-start gap-[20px]">
+                    <div class="relative overflow-x-auto py-5 w-full">
+                      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3">
+                              Diagnostico
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                              Tratamiento
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                              Fecha diagnostico
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                Gripe
+                              </th>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                Next - Ibuprofeno 600mg
+                              </td>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                10/5/2024
+                              </td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                                Sinusitis
+                              </th>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                Reposo - Ibuprofeno 600mg
+                              </td>
+                              <td class="px-6 py-4 text-gray-900 ">
+                                7/5/2024
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- Historial -->
+                <div id="historial_body" class="w-full">
+                  <h4 class="text-lg font-bold uppercase flex items-start justify-start gap-[20px]"><span class="text-3xl text-red-500"><i class="fa-solid fa-clock-rotate-left"></i></span>Historial de enfermedades</h4>
+                  <div class="w-full flex items-center justify-start gap-[20px]">
+                    <div class="relative overflow-x-auto py-5 w-full">
+                      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                          <tr>
+                            <th scope="col" class="px-6 py-3">
+                              Enfermedad
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                              Fecha
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                              Bronquitis
+                            </th>
+                            <td class="px-6 py-4 text-gray-900 ">
+                              10/5/2017
+                            </td>
+                          </tr>
+                          <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                              Neumonía
+                            </th>
+                            <td class="px-6 py-4 text-gray-900 ">
+                              7/5/2019
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <footer>
+      <div class="w-full bg-red-400 h-1/5">
+        <p class="w-full text-center text-white p-3" id="copyright"></p>
+      </div>
+    </footer>
+  </main>
+</body>
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const sidebarBtn = document.getElementById("sidebarBtn");
+
+  sidebarBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("hidden");
+  })
+</script>
+</html>
